@@ -34,7 +34,7 @@ async function main() {
     const VER = "1.0";
     try {
         const dest = process.argv[2];
-        if (dest == '--help' || dest == '-h') {
+        if (dest === '--help' || dest === '-h') {
             const datas = await getCurrentCurrencies();
             console.log("╔════════════════════════════════════════╗");
             console.log("║        CURRENCY CONVERTER CLI          ║");
