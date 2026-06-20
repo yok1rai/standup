@@ -107,7 +107,7 @@ NOTES:
                 let amount = process.argv[5];
                 let currencyData = {};
                 if (!dest) {
-                    throw new Error("You must enter a destination");
+                    throw new Error("You must enter a destination (run --run --help for detailed information)");
 
                 }
                 if (Number.isNaN(Number(base))) {
