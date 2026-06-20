@@ -41,7 +41,7 @@ async function main() {
             currencyData.rates[dest] *= amountNum
         }
         currencyData.rates[dest] = Number(currencyData.rates[dest].toFixed(3))
-        console.log(`By ${currencyData.date}, ${currencyData.amount} ${currencyData.base} is equal to ${currencyData.rates[dest]} ${dest} (roughly ${Math.ceil(currencyData.rates[dest])} ${dest})`)
+        console.log(`By ${currencyData.date}, ${currencyData.amount} ${currencyData.base} is equal to ${currencyData.rates[dest]} ${dest} (roughly ${Math.round(currencyData.rates[dest])} ${dest})`)
     } catch (e) {
         console.error("Error:", e.message);
     }
