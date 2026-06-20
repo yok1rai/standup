@@ -1,4 +1,5 @@
 .env
 node_modules/
-node_module/*
-
+secret.md
+.DS_Store
+*.log

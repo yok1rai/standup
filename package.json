@@ -1,23 +1,25 @@
 {
-  "name": "standup",
+  "name": "currency-converter",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Simple CLI currency converter using Frankfurter API",
+  "main": "app.js",
   "scripts": {
     "exec": "node app.js",
     "dev": "nodemon app.js"
   },
   "keywords": [
-    "standup",
-    "github",
-    "daily",
-    "cli"
+    "currency",
+    "converter",
+    "cli",
+    "exchange-rate"
   ],
   "author": "yok1rai",
-  "license": "ISC",
+  "license": "MIT",
   "type": "module",
   "dependencies": {
-    "axios": "^1.18.0",
-    "dotenv": "^17.4.2"
+    "axios": "^1.18.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
   }
 }
