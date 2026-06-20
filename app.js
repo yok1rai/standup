@@ -31,6 +31,7 @@ async function getCurrentCurrencies() {
 }
 
 async function main() {
+    const VER = "1.0";
     try {
         const dest = process.argv[2];
         if (dest == '--help' || dest == '-h') {
@@ -39,10 +40,10 @@ async function main() {
             console.log("║        CURRENCY CONVERTER CLI          ║");
             console.log("╚════════════════════════════════════════╝\n");
 
-            console.log("USAGE: node app.js <DEST> [BASE] [AMOUNT]\n");
+            console.log("USAGE: node app.js <DEST | CMD> [BASE] [AMOUNT]\n");
 
             console.log("ARGUMENTS:");
-            console.log("  <DEST>          (required) Target currency code (e.g., EUR, GBP, JPY)");
+            console.log("  <DEST | CMD>          (required) Target currency code (e.g., EUR, GBP, JPY) or special command");
             console.log("  [BASE]          (optional) Source currency code (default: USD)");
             console.log("  [AMOUNT]        (optional) Amount to convert (default: 1)\n");
 
@@ -56,12 +57,19 @@ async function main() {
             for (const [key, value] of Object.entries(datas)) {
                 console.log(`${key}    ${value}`)
             }
+            console.log("\nSPECIAL COMMANDS\n");
+            console.log("--help     -h      help menu");
+            console.log("--version  -v      version info")
+        } else if (dest === '--version' || dest === '-v') {
+            console.log("yok1rai/currency-convertor");
+            console.log(`version: ${VER}`);
+            console.log(`Licensed under MIT license`);
         } else {
             const base = process.argv[3];
             const amount = process.argv[4];
             let currencyData = {};
             if (!dest) {
-                console.log("Usage: node app.js <DEST> <?BASE> <?AMOUNTS>");
+                console.log("Usage: node app.js <DEST | CMD> <?BASE> <?AMOUNTS>");
                 return;
             }
             if (base) {
