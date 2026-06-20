@@ -1,0 +1,23 @@
+{
+  "name": "standup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "exec": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "standup",
+    "github",
+    "daily",
+    "cli"
+  ],
+  "author": "yok1rai",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "axios": "^1.18.0",
+    "dotenv": "^17.4.2"
+  }
+}
